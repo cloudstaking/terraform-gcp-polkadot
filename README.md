@@ -1,4 +1,4 @@
-# terraform-scaleway-polkadot
+# terraform-gcp-polkadot
 
 Terraform module to bootstrap ready-to-use _single node_ (or optionally _active-standby_) Kusama/Polkadot validators in GCP. Besides infrastructure components (security group, instance, volume, etc), it also:
 
