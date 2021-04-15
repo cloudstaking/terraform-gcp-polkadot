@@ -14,7 +14,7 @@ It uses the latest official Ubuntu 20.04 LTS (no custom image).
 
 ```hcl
 module "kusama_validator" {
-  source = "github.com/cloudstaking/terraform-gcp-polkadot?ref=1.1.0"
+  source = "github.com/cloudstaking/terraform-gcp-polkadot?ref=1.0.0"
 
   instance_name = "ksm-validator"
   ssh_key       = "ssh-rsa XXX"
