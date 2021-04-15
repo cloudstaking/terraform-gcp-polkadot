@@ -41,6 +41,17 @@ resource "google_compute_firewall" "validator" {
     ports    = ["80"]
   }
 
+  # https for TLS-ALPN challange only when public_fqdn is given:
+  # https://caddyserver.com/docs/automatic-https#tls-alpn-challenge
+  dynamic "allow" {
+    for_each = range(var.public_fqdn != "" ? 1 : 0)
+    content {
+      protocol = "tcp"
+      ports    = ["443"]
+    }
+  }
+
+
   # node-exporter
   allow {
     protocol = "tcp"
